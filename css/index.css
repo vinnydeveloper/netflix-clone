@@ -1,20 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Roboto";
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  background: black;
+  padding: 0 50px;
+  /*! background: black; */
   height: 80px;
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
 }
 
 header div img {
-  width: 120px;
+  width: 170px;
 }
 
 header #login {
@@ -39,7 +45,7 @@ header #login button {
   font-size: 16px;
 }
 
-section {
+section#banner {
   background-image: url("../images/banner.jpg");
   color: #fff;
   height: 80vh;
@@ -50,40 +56,77 @@ section {
   position: relative;
 }
 
-section::after {
+section#banner::after {
   content: "";
   width: 100%;
   height: 100%;
   background: black;
   position: absolute;
-  opacity: 0.29;
+  opacity: 0.69;
 }
 
-section h1 {
+section#banner * {
+  position: relative;
+  z-index: 1;
+}
+section#banner h1 {
   font-size: 70px;
   position: relative;
   z-index: 1;
 }
 
-section div {
+section#banner div {
   width: 40%;
   display: flex;
   position: relative;
   z-index: 1;
 }
 
-section div input {
+section#banner div input {
   height: 60px;
   width: 80%;
   font-size: 20px;
   border-radius: 4px;
 }
 
-section div button {
+section#banner div button {
   width: 19%;
   background: #e50914;
   color: #fff;
   font-size: 22px;
   border: none;
   border-radius: 4px;
+}
+
+section.motivos {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 60px;
+}
+
+section.motivos div {
+}
+
+section.motivos div h1 {
+  font-size: 60px;
+}
+
+section.motivos div p {
+  font-size: 30px;
+}
+
+section.motivos div img {
+}
+
+hr.divisor {
+  height: 8px;
+  background-color: #222;
+  border: none;
+}
+
+.alterna {
+  flex-direction: row-reverse;
 }
